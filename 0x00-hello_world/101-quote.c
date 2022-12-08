@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <unistd.h>
 
-
 /**
- * main - print exactly and that piece of artbis useful
- *
- * return: Always 0 (success)
+ * main - Entry point
+ * Return: Always 1
  */
 
 int main(void)
