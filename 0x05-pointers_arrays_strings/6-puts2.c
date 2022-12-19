@@ -1,28 +1,29 @@
+#include <stdio.h>
+#include <string.h>
 #include "main.h"
+
 /**
- * rev_string - reverse the string
- * @s: pointer to string
- *
- * Return: void
+ * puts2 - writes to standard output
+ * @str: given string
  */
-void rev_string(char *s)
+
+void puts2(char *str)
 {
-	int i, j, k, temp;
+	int flag = 0;
 
-	i = 0;
-	while (s[i] != '\0')
+	while (*str != '\0')
 	{
-		i++;
+		if (flag == 0)
+		{
+			_putchar(*str);
+			str++;
+			flag = 1;
+		}
+		else
+		{
+			str++;
+			flag = 0;
+		}
 	}
-	k = 0;
-	j = i - 1;
-
-	while (k < j)
-	{
-		temp = s[k];
-		s[k] = s[j];
-		s[j] = temp;
-		k++;
-		j--;
-	}
+	_putchar('\n');
 }
